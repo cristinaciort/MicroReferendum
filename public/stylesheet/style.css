@@ -1,0 +1,51 @@
+/*Bottom */
+#logo {
+	width: 15%;
+}
+
+#bottom {
+	background: #eaeaeb;
+	height: 65px;
+}
+
+#login {
+	font-size: 18px;
+	margin-right: 10px;
+	margin-top: 10px;
+	color: black;
+}
+
+#login:hover {
+	color: #be0f18;
+}
+
+#password {
+	-webkit-text-security: circle;
+}
+#password:hover {
+	-webkit-text-security: none;
+}
+/*container */
+#harta {
+	background: white;
+	width: 100%;
+}
+
+/*footer*/
+.footer {
+	margin-top: 30px;
+}
+
+/*other classes*/
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
+}
+
+.no-pad {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}

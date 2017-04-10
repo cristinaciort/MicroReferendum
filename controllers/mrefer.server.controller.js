@@ -1,3 +1,3 @@
-exports.hello = function(req, res) {
-    res.send('Hello World!');
+exports.home = function(req, res) {
+    res.render('home');
 };

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="/stylesheet/style.css">
+	<script type="text/javascript" src="/scripts/functionality.js"></script>
+	<script type="text/javascript" src="/scripts/mapResize.js"></script>
+</head>
+<body>
+	<link href='bootcss/bootstrap.min.css' rel='stylesheet' />
+	<script src="bootjs/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script>
+	<div id="pollsDiv">
+		<div class="bottom col-xs-12">
+			<a href="/"><img class="pull-left" id="logo" src="/stylesheet/Imgs/logo.jpg"/></a>
+			<a href="#myPopup" data-rel="popup"><span class="pull-right" id="login">Autentificare</span></a>
+		</div>
+		<div class="container">
+			<div class="dropdown" style="width: 3%;">
+				<button class="btn btn-default no-pad" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+				    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="main-menu">
+				    <li  id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="open_menu()">
+				    	<a href="#">Categori</a>
+				    </li>
+				    <!-- Categories Dropdown Menu -->
+				    <ul id="dropdownMenu3" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				    	<li><a href="#" onclick="filter_by_category('DR')">Drumuri</a></li>
+				    	<li><a href="#" onclick="filter_by_category('SC')">Scoli</a></li>
+				    </ul>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#">Votarile mele</a></li>
+				    <li><a href="#">Adauga votare</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#">Creare cont</a></li>
+				</ul>
+			</div>
+			<div id="poll-list" class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+			Lista POLL-uri filtrate incarcate dinamic
+			</div>
+			<!-- Login POPUP -->
+		   	<div data-role="popup" id="myPopup" class="ui-content" data-overlay-theme="b" data-transition="pop" data-position-to="window"	>
+				<a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+		  		<div id="load-login">
+					<p>Introduceti datele de autentificare.</p>
+					<form>
+						<lable>Nume utilizator:</lable>
+						<input type="text" name="username" id="username">
+						<lable>Parola:</lable>
+						<input type="text" name="password" id="password" style=""/>
+					</form>
+					<button type="submit" onclick="login_info()" class="btn" id="logare"><span>Autentificare</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

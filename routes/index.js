@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
     return mrefctrl.home(req, res);
 });
 
-router.get('/pollsList.html', function(req, res) {
+router.get('/pollsList', function(req, res) {
     return mrefctrl.pollsList(req, res);
 });
 

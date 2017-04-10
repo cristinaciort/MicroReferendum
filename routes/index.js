@@ -7,6 +7,10 @@ router.get('/', function(req, res) {
     return mrefctrl.home(req, res);
 });
 
+router.get('/pollsList.html', function(req, res) {
+    return mrefctrl.pollsList(req, res);
+});
+
 router.post('/login', function(req, res) {
 	return res.send('ok');
 });

@@ -3,11 +3,12 @@
 	width: 15%;
 }
 
-#bottom {
-	background: #eaeaeb;
-	height: 65px;
-}
+.bottom {
+	position: fixed;
+    width: 100%;
+    background: #e9e9ea;
 
+}
 #login {
 	font-size: 18px;
 	margin-right: 10px;
@@ -31,9 +32,23 @@
 	width: 100%;
 }
 
+area:hover {
+	background: red;
+}
+
 /*footer*/
 .footer {
 	margin-top: 30px;
+}
+
+/*Poll*/
+#poll-list {
+	background: black;
+}
+
+#pollsDiv {
+	background: black;
+	color: white;
 }
 
 /*other classes*/

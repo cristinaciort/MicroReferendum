@@ -7,4 +7,8 @@ router.get('/', function(req, res) {
     return mrefctrl.home(req, res);
 });
 
+router.post('/login', function(req, res) {
+	return res.send('ok');
+});
+
 module.exports = router;

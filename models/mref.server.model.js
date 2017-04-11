@@ -22,7 +22,7 @@ var referendumSchema = new Schema({
     result:         String
 });
 
-var categorieSchema = new Schema({
+var categorySchema = new Schema({
     name:           String,
     code:           String     
 });
@@ -40,7 +40,7 @@ var roleSchema = new Schema({
 module.exports = {
     User:           mongoose.model('User', userSchema),
     Referendum:     mongoose.model('Referendum', referendumSchema),
-    Categories:     mongoose.model('Categories', categorieSchema),
+    Categories:     mongoose.model('Categories', categorySchema),
     Region:         mongoose.model('Region', regionSchema),
     Roles:          mongoose.model('Roles', roleSchema)
 }

@@ -1,4 +1,4 @@
-var model = require('../models/mrefer.server.model.js')
+var model = require('../models/mref.server.model.js')
 
 exports.home = function(req, res) {
     res.render('home');

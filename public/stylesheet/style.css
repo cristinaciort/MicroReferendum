@@ -26,6 +26,10 @@
 #password:hover {
 	-webkit-text-security: none;
 }
+/*Menu*/
+#menu2 {
+	margin-left: 160px;
+}
 /*container */
 #harta {
 	background: white;

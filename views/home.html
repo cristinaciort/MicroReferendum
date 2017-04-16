@@ -23,18 +23,18 @@
 		<div class="container">
 		<!-- Main Dropdown Menu -->
 			<div class="dropdown" style="width: 3%;">
-				<button class="btn btn-default no-pad" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+				<button class="btn btn-default no-pad" type="button" data-toggle="collapse" data-target="#menu1">
 				    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
 				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="main-menu">
-				    <li  id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onclick="open_menu()">
-				    	<a href="#">Categori</a>
+				<ul class="dropdown-menu" id="menu1">
+				    <li  class="dropdown">
+				    	<a href="#" data-toggle="dropdown" class="dropdown-toggle">Categori</a>
+				    	<!-- Categories Dropdown Menu -->
+				    	<ul class="dropdown-menu" id="menu2">
+					    	<li><a href="#" onclick="filter_by_category('DR')">Drumuri</a></li>
+					    	<li><a href="#" onclick="filter_by_category('SC')">Scoli</a></li>
+					    </ul>
 				    </li>
-				    <!-- Categories Dropdown Menu -->
-				    <ul id="dropdownMenu3" class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				    	<li><a href="#" onclick="filter_by_category('DR')">Drumuri</a></li>
-				    	<li><a href="#" onclick="filter_by_category('SC')">Scoli</a></li>
-				    </ul>
 				    <li role="separator" class="divider"></li>
 				    <li><a href="#">Votarile mele</a></li>
 				    <li><a href="#">Adauga votare</a></li>
@@ -46,7 +46,7 @@
 				<div class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
 					<img src="/stylesheet/Imgs/harta.jpg" id="harta" usemap="#harta">
 					<map name="harta" id="mapHiLight">
-					    <area id="BH" href="pollsList.html" shape="circle" coords="220,210,44" alt="bihor" title="Bihor"> <!-- onclick="filter_by_county('BH')"> -->
+					    <area id="BH" href="pollsList.html" shape="circle" coords="220,210,44" alt="bihor" title="Bihor">
 					</map>
 				</div>
 			</div>

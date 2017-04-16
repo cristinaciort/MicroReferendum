@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var mrefctrl = require('../controllers/mrefer.server.controller.js');
+var mrefctrl = require('../controllers/mref.server.controller.js');
 
 /* GET home page. */
 router.get('/', function(req, res) {
     return mrefctrl.home(req, res);
 });
 
-router.get('/pollsList.html', function(req, res) {
+router.get('/pollsList', function(req, res) {
     return mrefctrl.pollsList(req, res);
 });
 

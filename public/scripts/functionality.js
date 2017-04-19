@@ -56,4 +56,23 @@ function create_polls_list() {
 	$("div#poll-list").html(html);
 	return html;
 }
-//poll
+//poll form data
+function poll_info()
+{
+    var title = $('#pollTitle').val();
+    var desc = $('pollDesc').val();
+    var category = [];
+    var county = [];
+
+    $("input:checkbox[name=category]:checked").each(function(){
+    category.push($(this).val());
+    });
+
+    $("input:checkbox[name=judet]:checked").each(function(){
+    county.push($(this).val());
+    });
+
+    $.post("/addPoll", {Titlu: title, Description: desc, Categories:category, Counties: county}, function(){alert('daaa, a mers')}).fail(function() {
+    	alert( "error" );
+  	});
+}

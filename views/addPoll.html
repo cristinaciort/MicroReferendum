@@ -18,7 +18,6 @@
 	<div id="addPollDiv">
 		<div class="bottom col-xs-12">
 			<a href="/"><img class="pull-left" id="logo" src="/stylesheet/Imgs/logo.jpg"/></a>
-			<a href="#myPopup" data-rel="popup"><span class="pull-right" id="login">Autentificare</span></a>
 		</div>
 		<div class="container">
 		<!-- Main Dropdown Menu -->
@@ -27,14 +26,7 @@
 				    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
 				</button>
 				<ul class="dropdown-menu" id="menu1">
-				    <li  class="dropdown">
-				    	<a href="#" data-toggle="dropdown" class="dropdown-toggle">Categori</a>
-				    	<!-- Categories Dropdown Menu -->
-				    	<ul class="dropdown-menu" id="menu2">
-					    	<li><a href="#" onclick="filter_by_category('DR')">Drumuri</a></li>
-					    	<li><a href="#" onclick="filter_by_category('SC')">Scoli</a></li>
-					    </ul>
-				    </li>
+				    <li><a href="#myPopup" data-rel="popup">Autentificare</a></li>
 				    <li role="separator" class="divider"></li>
 				    <li><a href="#">Votarile mele</a></li>
 				    <li><a href="#">Adauga votare</a></li>
@@ -44,7 +36,7 @@
 			</div>	
 		</div>
 
-		<div id="pollFormWrappper">
+		<div id="pollFormWrappper" class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
 			<form id="pollForm">
 				Titlu: <input type="text" id="pollTitle">
 				

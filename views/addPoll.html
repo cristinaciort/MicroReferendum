@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Poll</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="/stylesheet/style.css">
+	<script type="text/javascript" src="/scripts/functionality.js"></script>
+	<script type="text/javascript" src="/scripts/mapResize.js"></script>
+</head>
+<body>
+	<link href='bootcss/bootstrap.min.css' rel='stylesheet' />
+	<script src="bootjs/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script type="text/javascript" src="http://davidlynch.org/projects/maphilight/jquery.maphilight.js"></script>
+	<div id="addPollDiv">
+		<div class="bottom col-xs-12">
+			<a href="/"><img class="pull-left" id="logo" src="/stylesheet/Imgs/logo.jpg"/></a>
+			<a href="#myPopup" data-rel="popup"><span class="pull-right" id="login">Autentificare</span></a>
+		</div>
+		<div class="container">
+		<!-- Main Dropdown Menu -->
+			<div class="dropdown" style="width: 3%;">
+				<button class="btn btn-default no-pad" type="button" data-toggle="collapse" data-target="#menu1">
+				    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+				</button>
+				<ul class="dropdown-menu" id="menu1">
+				    <li  class="dropdown">
+				    	<a href="#" data-toggle="dropdown" class="dropdown-toggle">Categori</a>
+				    	<!-- Categories Dropdown Menu -->
+				    	<ul class="dropdown-menu" id="menu2">
+					    	<li><a href="#" onclick="filter_by_category('DR')">Drumuri</a></li>
+					    	<li><a href="#" onclick="filter_by_category('SC')">Scoli</a></li>
+					    </ul>
+				    </li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#">Votarile mele</a></li>
+				    <li><a href="#">Adauga votare</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#">Creare cont</a></li>
+				</ul>
+			</div>	
+		</div>
+
+		<div id="pollFormWrappper">
+			<form id="pollForm">
+				Titlu: <input type="text" name="pollTitle">
+				Descriere: <textarea id="pollDesc" rows="5" cols="50"></textarea>
+				Categorie: 
+				<input type="checkbox" id="firstCat" name="category" value="Drumuri">
+				<label for="firstCat">Drumuri</label>
+				<input type="checkbox" id="secondCat" name="category" value="Scoli">
+				<label for="secondCat">Scoli</label>
+				<button type="submit">Adauga Poll</button>	
+			</form>
+		</div>
+
+		<!-- Login POPUP -->
+	   	<div data-role="popup" id="myPopup" class="ui-content" data-overlay-theme="b" data-transition="pop" data-position-to="window"	>
+    		<a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      		<div id="load-login">
+				<p>Introduceti datele de autentificare.</p>
+				<form>
+					<lable>Nume utilizator:</lable>
+					<input type="text" name="username" id="username">
+					<lable>Parola:</lable>
+					<input type="text" name="password" id="password" style=""/>
+				</form>
+				<button type="submit" onclick="login_info()" class="btn" id="logare"><span>Autentificare</span></button>
+			</div>
+    	</div>
+	</div>
+</body>
+</html>

@@ -7,3 +7,7 @@ exports.home = function(req, res) {
 exports.pollsList = function(req, res) {
     res.render('pollsList');
 };
+
+exports.addPoll = function(req, res) {
+    res.render('addPoll');
+};

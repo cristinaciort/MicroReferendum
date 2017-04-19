@@ -15,4 +15,8 @@ router.post('/login', function(req, res) {
 	return res.send('ok');
 });
 
+router.get('/addPoll', function(req, res) {
+    return mrefctrl.addPoll(req, res);
+});
+
 module.exports = router;

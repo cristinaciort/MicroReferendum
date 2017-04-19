@@ -24,7 +24,7 @@
 				<button class="btn btn-default no-pad" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
 				    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
 				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="main-menu">
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="menu1">
 				    <li><a href="#myPopup" data-rel="popup">Autentificare</a></li>
 				    <li role="separator" class="divider"></li>
 				    <li><a href="#">Votarile mele</a></li>
@@ -33,11 +33,23 @@
 				    <li><a href="#">Creare cont</a></li>
 				</ul>
 			</div>
-			<div>
+			<!-- CATEGORY FILTER -->
+			<div class="col-xs-2 category-filter row">
 				<span>CATEGORI:</span>
-				<input type="checkbox" name=""> 
+				<input type="checkbox" class="messageCheckbox" name="drumuri" id="DR" onclick="add_cat(id)">
+				<label>Drumuri</label>
+				<input type="checkbox" class="messageCheckbox" name="spitale" id="SP" onclick="add_cat(id)">
+				<label>Spitale</label>
+				<input type="checkbox" class="messageCheckbox" name="scoli" id="SC" onclick="add_cat(id)">
+				<label>Scoli</label>
+				<input type="checkbox" class="messageCheckbox" name="parcuri" id="PR" onclick="add_cat(id)">
+				<label>Parcuri</label>
+				<input type="checkbox" class="messageCheckbox" name="parcuri" id="SV" onclick="add_cat(id)">
+				<label>Spatii Verzi</label>
+				<button class="btn btn-primary" id="applyBtn" onclick="create_polls_list()"><span style="width: 100%;">Aplica</span></button>
 			</div>
-			<div id="poll-list" class="col-xs-offset-1 col-xs-10 col-xs-offset-1">
+			<!-- POLLS LIST -->
+			<div id="poll-list" class="col-xs-10">
 
 			Lista POLL-uri filtrate incarcate dinamic
 			</div>

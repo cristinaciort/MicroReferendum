@@ -1,4 +1,6 @@
 //Variabile
+var polls, html, filterList = [], i = 0;
+var countyList = ['Arad', 'Arges','Bacau','Bihor','Bistrita-Nasaud'];
 //login
 function login_info() {
 	var username = $('#username').val();
@@ -7,7 +9,6 @@ function login_info() {
     	alert( "error" );
   	});
 }
-
 //end Login
 //harta
 function filter_by_county(id) {
@@ -18,28 +19,41 @@ function filter_by_county(id) {
 	.fail(function() {
     	alert( "error" );
   	});
+  	polls = $.parseJSON(data);
 }
-var poll = data;
+//Pentru test
+polls = [{category: 'SP' , title: 'Spital judetean' , description: 'laassjfbs sjbsj b bsjb js jsjb sbsbdsb sbdj sbjd bsjsbj sbj ' , id: 1 },
+		{category: 'SC' , title: 'Scoala primara', description:'sdfsdfs sfsd' , id: 2},
+		{category: 'DR', title: 'Drumuri europene' , description: 'dfdfd' , id: 3},
+		{category: 'SP', title: 'Spital central' , description: 'afdfsf dsfsd' , id: 4 }];
 
-//dropdown
-function open_menu() {
-	$(this).parents().addClass('open');
-}
-
-function filter_by_category(id) {
-	
-}
-
-function create_polls_list() {
-	var html = '<div>';
-	for (var i = 0; i < poll.length; ++i)
-		if (poll[i].category === id) {
-			html += '<h2>' + data[i].title + '</h2>';
-			html += '<a href="/votarea/'+ data[i].id + '">';
-			html += '<p>' + data[i].description + '</p>';
-			html += '</a>';
+//Category Filter
+function add_cat(id) {
+	if (filterList.indexOf(id) == -1){
+		filterList[i] = id
+		++i;
+	} else {
+		for( var k = 0; k < filterList.length; ++k){
+			if (filterList[k] === id) {
+				filterList.splice(k,1);
+				--i;
+			}
 		}
-	html += '</div>';
+	}
+}
+function create_polls_list() {
+	html = '<ol>';
+	for (var i = 0; i < polls.length; ++i) {
+		for(var j = 0; j < filterList.length; ++j)
+			if (polls[i].category === filterList[j]) {
+				html += '<li><h4>' + polls[i].title + '</h4></li>';
+				html += '<a href="/votarea/'+ polls[i].id + '">';
+				html += '<p>' + polls[i].description + '</p>';
+				html += '</a>';
+			}
+	}
+	html += '</ol>';
+	$("div#poll-list").html(html);
 	return html;
 }
 //poll

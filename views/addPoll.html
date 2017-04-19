@@ -47,13 +47,24 @@
 		<div id="pollFormWrappper">
 			<form id="pollForm">
 				Titlu: <input type="text" name="pollTitle">
+				
 				Descriere: <textarea id="pollDesc" rows="5" cols="50"></textarea>
+				
 				Categorie: 
-				<input type="checkbox" id="firstCat" name="category" value="Drumuri">
 				<label for="firstCat">Drumuri</label>
+				<input type="checkbox" id="firstCat" name="category" value="Drumuri">
 				<input type="checkbox" id="secondCat" name="category" value="Scoli">
 				<label for="secondCat">Scoli</label>
-				<button type="submit">Adauga Poll</button>	
+				
+				Judet:
+		  		<input type="checkbox" id="firstJud" name="judet" value="b">
+				<label for="firstJud">Bucuresti</label>
+		  		<input type="checkbox" id="secondJud" name="judet" value="ct">
+				<label for="secondJud">Constanta</label>
+				
+				<button id="submitForm" type="submit">Adauga Poll</button>
+
+					
 			</form>
 		</div>
 
